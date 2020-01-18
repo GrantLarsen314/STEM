@@ -3,6 +3,7 @@ import java.awt.event.*;
 
 
 public class Standard{
+    static AePlayWave aw = new AePlayWave("clicker.wav");
         public static void standard(){
         int framex=400;
         int framey=500;
@@ -23,8 +24,8 @@ public class Standard{
         //@Override
         public void actionPerformed(ActionEvent e) {
           String testVar = tf.getText();
-          tf.setText("Coolio" + testVar);
-          Play.beep();
+          tf.setText("Test " + testVar);
+          Play.play();
           
       }
     });
