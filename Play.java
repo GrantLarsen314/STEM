@@ -16,7 +16,7 @@ public class Play{
 	public static void met(double bpm) throws InterruptedException,MalformedURLException {
 	do{
 	play();
-	Thread.sleep((int)(60000.0/bpm));
+	Thread.sleep((long)(60000.0/bpm));
 
 	} while(Main.exiter);
 }
