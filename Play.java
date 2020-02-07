@@ -9,14 +9,14 @@ public class Play{
 			AudioClip clip = Applet.newAudioClip(new URL("file:clicker(rev).wav"));
 			clip.loop();
 			//System.out.println("test");
-            Thread.sleep(66);
+            Thread.sleep(50);
             clip.stop();
 
 	}
-	public static void met(int bpm) throws InterruptedException,MalformedURLException {
+	public static void met(double bpm) throws InterruptedException,MalformedURLException {
 	do{
 	play();
-	Thread.sleep(((int)(double)60000/bpm)-66);
+	Thread.sleep((int)(60000.0/bpm));
 
 	} while(Main.exiter);
 }

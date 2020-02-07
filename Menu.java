@@ -51,6 +51,7 @@ import java.awt.event.*;
       @Override
       public void actionPerformed(ActionEvent e) {
         System.out.println("About Pressed");
+        About.about();
       }
     });
         b5.addActionListener(new ActionListener() {

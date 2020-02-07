@@ -31,7 +31,7 @@ public class Standard{
          
 		      new Thread(() -> {
             try{
-              Play.met(Integer.parseInt(testVar));              
+              Play.met((double)Integer.parseInt(testVar));              
             }
             catch(InterruptedException ie){
 	          	System.out.println();
