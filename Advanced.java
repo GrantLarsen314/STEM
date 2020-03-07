@@ -9,11 +9,18 @@ public class Advanced{
         JFrame stand = new JFrame();
         JTextField tf = new JTextField();
         tf.setBounds(120,100,150,30);
+	tf.setText("Measure Tempo.");
         
 
+  	JTextField tf02 = new JTextField();
+        tf02.setBounds(120,140,150,30);
+	tf02.setText("Time Sig Top");
 
-        
-        
+        JTextField tf03 = new JTextField();
+        tf03.setBounds(120,180,150,30);
+	tf03.setText("Time Sig Bottom");       
+
+
         JButton ent3r = new JButton("Start");
         ent3r.setBounds(270, 100, 100, 30);
 
@@ -60,6 +67,8 @@ public class Advanced{
         stand.add(ent3r);
         stand.add(stopIt);
         stand.add(tf);
+	stand.add(tf02);
+	stand.add(tf03);
 
 
     

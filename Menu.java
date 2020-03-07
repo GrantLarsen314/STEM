@@ -33,8 +33,7 @@ import java.awt.event.*;
       @Override
       public void actionPerformed(ActionEvent e) {
         System.out.println("Advanced Pressed");
-        Advanced.advanced();
-      }
+             }
     });
     b2.addActionListener(new ActionListener() {
       @Override
@@ -46,6 +45,7 @@ import java.awt.event.*;
       @Override
       public void actionPerformed(ActionEvent e) {
         System.out.println("Setup Pressed");
+	Advanced.advanced();
       }
     });
         b4.addActionListener(new ActionListener() {
