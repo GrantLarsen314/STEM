@@ -17,7 +17,7 @@ public class SongInfo{
     MeasureInfoList = new ArrayList<MeasureInfo>();
   }
 
-  public SongInfo(String sn,ArrayList<> ar){
+  public SongInfo(String sn, ArrayList ar){
     songName = sn;
     MeasureInfoList = ar;
   }
