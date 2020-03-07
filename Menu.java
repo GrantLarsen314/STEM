@@ -45,7 +45,7 @@ import java.awt.event.*;
       @Override
       public void actionPerformed(ActionEvent e) {
         System.out.println("Setup Pressed");
-	Advanced.advanced();
+	Setup.setup();
       }
     });
         b4.addActionListener(new ActionListener() {

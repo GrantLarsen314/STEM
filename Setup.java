@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.net.*;
 
-public class Advanced{
-        public static void advanced(){
+public class Setup{
+        public static void setup(){
         int framex=400;
         int framey=500;
         JFrame stand = new JFrame();
