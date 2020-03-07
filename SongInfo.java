@@ -4,7 +4,7 @@ public class SongInfo{
   
   
   private String songName;
-  private ArrayList<MeasureInfo> measureInfoList;
+  /*private*/ static ArrayList<MeasureInfo> measureInfoList; //sorry, I don't have the time right now to get this to work privately right now To do later.
   
   
   public SongInfo(){

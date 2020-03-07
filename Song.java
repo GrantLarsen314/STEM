@@ -6,19 +6,19 @@ public class Song{
 
     File db = new File("db.txt");
 
-    ArrayList<MeasureInfo> measures = new ArrayList<MeasureInfo>();
+    static ArrayList<MeasureInfo> measures = new ArrayList<MeasureInfo>();
     String fullLine;
     String[] partialLine;
     int measureNumber = 1;
 
-    SongInfo sang = new SongInfo("Song", measures );
+    static SongInfo sang = new SongInfo("Song", measures );
    
     public Song(){
     try{
         Scanner scan = new Scanner(db);
         while (scan.hasNextLine()){
             this.fullLine = scan.nextLine();
-            this.partialLine = fullLine.split(" ");
+            this.partialLine  = fullLine.split(" ");
             String timeSig = this.partialLine[2] + "/" + this.partialLine[3];
             
 
