@@ -20,4 +20,16 @@ public class Play{
 
 	} while(Main.exiter);
 }
+
+	public static void playAdv(){
+		MeasureInfo mi = new MeasureInfo();
+		String[] test = new String[2];
+		mi = Song.sang.measureInfoList.get(0);
+		test = mi.getMeasureStuff;
+		int bpm1 = test[0];
+		int numBeats = test[1];
+
+	}
+
+
 }

@@ -4,47 +4,47 @@ public class SongInfo{
   
   
   private String songName;
-  private ArrayList<MeasureInfo> MeasureInfoList;
+  private ArrayList<MeasureInfo> measureInfoList;
   
   
   public SongInfo(){
     songName = "UnNamed Song";
-    MeasureInfoList = new ArrayList<MeasureInfo>();
+    measureInfoList = new ArrayList<MeasureInfo>();
   }
   
   public SongInfo(String sn){
     songName = sn;
-    MeasureInfoList = new ArrayList<MeasureInfo>();
+    measureInfoList = new ArrayList<MeasureInfo>();
   }
 
   public SongInfo(String sn, ArrayList ar){
     songName = sn;
-    MeasureInfoList = ar;
+    measureInfoList = ar;
   }
   
   
   
   //Below are various commands for editing the measures in the ArrayList
   public void addMeasure(){
-    MeasureInfoList.add(new MeasureInfo());
+    measureInfoList.add(new MeasureInfo());
   }
   public void addMeasure(int mn, int mbpm, int nob, int nt, String ts){
-    MeasureInfoList.add(new MeasureInfo(mn, mbpm, nob, nt, ts));
+    measureInfoList.add(new MeasureInfo(mn, mbpm, nob, nt, ts));
   }
   public MeasureInfo getMeasure(int i){
-    return MeasureInfoList.get(i);
+    return measureInfoList.get(i);
   }
   public MeasureInfo removeMeasure(int i){
-    return MeasureInfoList.remove(i);
+    return measureInfoList.remove(i);
   }
   public MeasureInfo setMeasure(int i, int mn, int mbpm, int nob, int nt, String ts){
-    return MeasureInfoList.set(i, new MeasureInfo(mn, mbpm, nob, nt, ts));
+    return measureInfoList.set(i, new MeasureInfo(mn, mbpm, nob, nt, ts));
   }
   
   
   
   public String toString(){
-    return "Song name: " + songName + " | Number of measures: " + MeasureInfoList.size();
+    return "Song name: " + songName + " | Number of measures: " + measureInfoList.size();
   }
   
 }

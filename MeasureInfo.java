@@ -29,7 +29,13 @@ public class MeasureInfo{
     timeSignature = ts;
   }
   
-  
+  public int[] getMeasureStuff(){
+    int[] measureStuff = new int[2];
+    measureStuff[0] = this.numOfBeats;
+    measureStuff[1] = this.measurebpm;
+    return measureStuff;
+
+  }
   
   //Might not use this much but ya neva no
   public String toString(){
