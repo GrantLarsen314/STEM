@@ -4,6 +4,8 @@ import java.net.*;
 
 public class Play{
 
+	private static Song sing= new Song();
+
 	public static void play() throws InterruptedException,MalformedURLException {
 
 			AudioClip clip = Applet.newAudioClip(new URL("file:clicker(rev).wav"));
@@ -22,18 +24,21 @@ public class Play{
 }
 
 	public static void playAdv() throws InterruptedException,MalformedURLException {
-		for (int j = 0; j< Song.sang.measureInfoList.size();j++){
-
-
 		MeasureInfo mi = new MeasureInfo();
+		for (int j = 0; j< sing.sang.measureInfoList.size();j++){
+
+
+		
 		int[] test = new int[2];
-		mi = Song.sang.measureInfoList.get(0);
+		mi = sing.sang.measureInfoList.get(j);
 		test = mi.getMeasureStuff();
-		int bpm1 = test[0];
-		int numBeats = test[1];
+		int bpm1 = test[1];
+		int numBeats = test[0];
 		System.out.println("new measure");
 		for (int i =0;i<numBeats;i++){
-			met(bpm1);
+			play();
+			Thread.sleep((long)(60000.0/bpm1));
+
 		}
 		
 		}
