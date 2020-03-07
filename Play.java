@@ -21,13 +21,22 @@ public class Play{
 	} while(Main.exiter);
 }
 
-	public static void playAdv(){
+	public static void playAdv() throws InterruptedException,MalformedURLException {
+		for (int j = 0; j< Song.sang.measureInfoList.size();j++){
+
+
 		MeasureInfo mi = new MeasureInfo();
 		int[] test = new int[2];
 		mi = Song.sang.measureInfoList.get(0);
 		test = mi.getMeasureStuff();
 		int bpm1 = test[0];
 		int numBeats = test[1];
+		System.out.println("new measure");
+		for (int i =0;i<numBeats;i++){
+			met(bpm1);
+		}
+		
+		}
 
 	}
 

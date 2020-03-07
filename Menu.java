@@ -33,6 +33,7 @@ import java.awt.event.*;
       @Override
       public void actionPerformed(ActionEvent e) {
         System.out.println("Advanced Pressed");
+	Advanced.advanced();
              }
     });
     b2.addActionListener(new ActionListener() {
