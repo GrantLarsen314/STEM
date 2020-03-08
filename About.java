@@ -11,7 +11,7 @@ public class About{
 
         JTextArea instruct = new JTextArea(1,7);
         instruct.setBounds(100,5,200,240);
-        instruct.append("MetroStorm was created by \n\nTyler Allen\n\nBen Hunt\n\nEthan Jett\n\n" +
+        instruct.append("MetroStorm was created by: \n\nTyler Allen\n\nBen Hunt\n\nEthan Jett\n\n" +
         "Grant Larsen");
 
 
