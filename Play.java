@@ -25,9 +25,9 @@ public class Play{
 
 	public static void playAdv() throws InterruptedException,MalformedURLException {
 		MeasureInfo mi = new MeasureInfo();
-		for (int j = 0; j< sing.sang.measureInfoList.size();j++){
-
-
+		int j = 0;
+		//for (int j = 0; j< sing.sang.measureInfoList.size();j++){
+		while(Main.exiter && j< sing.sang.measureInfoList.size()){
 		
 		int[] test = new int[2];
 		mi = sing.sang.measureInfoList.get(j);
@@ -35,12 +35,15 @@ public class Play{
 		int bpm1 = test[1];
 		int numBeats = test[0];
 		System.out.println("new measure");
+
 		for (int i =0;i<numBeats;i++){
+
 			play();
 			Thread.sleep((long)(60000.0/bpm1));
+		
 
 		}
-		
+		j++;
 		}
 
 	}
