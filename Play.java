@@ -18,7 +18,7 @@ public class Play{
 	public static void met(double bpm) throws InterruptedException,MalformedURLException {
 	do{
 	play();
-	Thread.sleep((long)(60000.0/bpm));
+	Thread.sleep((long)(60000.0/bpm-90));
 
 	} while(Main.exiter);
 }
@@ -39,7 +39,7 @@ public class Play{
 		for (int i =0;i<numBeats;i++){
 
 			play();
-			Thread.sleep((long)(60000.0/bpm1));
+			Thread.sleep((long)(60000.0/bpm1-90));
 		
 
 		}
