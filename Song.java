@@ -20,10 +20,14 @@ public class Song{
             this.fullLine = scan.nextLine();
             this.partialLine  = fullLine.split(" ");
             String timeSig = this.partialLine[2] + "/" + this.partialLine[3];
+            boolean[] an = new boolean[Integer.parseInt(this.partialLine[2])];
+            if (this.partialLine.length > 5){
+                for (int j = 5; j < this.partialLine.length; j++){
+                    an[Integer.parseInt(this.partialLine[j]) - 1] = true;
+                }
+            }
+            sang.addMeasure(this.measureNumber,Integer.parseInt(this.partialLine[1]),Integer.parseInt(this.partialLine[2]),Integer.parseInt(this.partialLine[3]),timeSig, an);
             
-
-            sang.addMeasure(this.measureNumber,Integer.parseInt(this.partialLine[1]),Integer.parseInt(this.partialLine[2]),Integer.parseInt(this.partialLine[3]),timeSig);
-
             this.measureNumber +=1;
         }
     }
