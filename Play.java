@@ -15,6 +15,17 @@ public class Play{
             clip.stop();
 
 	}
+	
+	    public static void play2() throws InterruptedException,MalformedURLException {
+
+            AudioClip clip = Applet.newAudioClip(new URL("file:clicker(rev(rev)).wav"));
+            clip.loop();
+            //System.out.println("test");
+            Thread.sleep(50);
+            clip.stop();
+
+	}
+	
 	public static void met(double bpm) throws InterruptedException,MalformedURLException {
 	do{
 	play();
@@ -34,14 +45,19 @@ public class Play{
 		test = mi.getMeasureStuff();
 		int bpm1 = test[1];
 		int numBeats = test[0];
-		System.out.println("new measure");
+		System.out.println("new measure: measure " + mi.getMeasureNum());
 
 		for (int i =0;i<numBeats;i++){
-
-			play();
-			Thread.sleep((long)(60000.0/bpm1-90));
-		
-
+		    
+		    if (mi.getAccentedNoteBoolean(i) == true){
+		        play();
+		        Thread.sleep((long)(60000.0/bpm1-90));
+		    }
+		    else{
+		        play2();
+		        Thread.sleep((long)(60000.0/bpm1-90));
+		    }
+		    
 		}
 		j++;
 		}
