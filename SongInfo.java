@@ -28,8 +28,8 @@ public class SongInfo{
   public void addMeasure(){
     measureInfoList.add(new MeasureInfo());
   }
-  public void addMeasure(int mn, int mbpm, int nob, int nt, String ts){
-    measureInfoList.add(new MeasureInfo(mn, mbpm, nob, nt, ts));
+  public void addMeasure(int mn, int mbpm, int nob, int nt, String ts, boolean[] an){
+    measureInfoList.add(new MeasureInfo(mn, mbpm, nob, nt, ts, an));
   }
   public MeasureInfo getMeasure(int i){
     return measureInfoList.get(i);
@@ -37,8 +37,8 @@ public class SongInfo{
   public MeasureInfo removeMeasure(int i){
     return measureInfoList.remove(i);
   }
-  public MeasureInfo setMeasure(int i, int mn, int mbpm, int nob, int nt, String ts){
-    return measureInfoList.set(i, new MeasureInfo(mn, mbpm, nob, nt, ts));
+  public MeasureInfo setMeasure(int i, int mn, int mbpm, int nob, int nt, String ts, boolean[] an){
+    return measureInfoList.set(i, new MeasureInfo(mn, mbpm, nob, nt, ts, an));
   }
   
   
